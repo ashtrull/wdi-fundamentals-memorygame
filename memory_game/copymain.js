@@ -5,17 +5,17 @@ var cards = [
     rank: "queen",
     suit: "hearts",
     cardImage: "images/queen-of-hearts.png"
-  },
+  }
   {
     rank: "queen",
     suit: "diamonds",
     cardImage: "images/queen-of-diamonds.png"
-  },
+  }
   {
     rank: "king",
     suit: "hearts",
     cardImage: "images/king-of-hearts.png"
-},
+}
 {
     rank: "king",
     suit: "diamonds",
@@ -34,15 +34,14 @@ var checkForMatch = function() {
     console.log("Please flip another card");
   }
 }
-//Function to log what cards were flipped
+//Function to log what cards were flipped and then check for a match using the function above
 var flipCard = function(cardId) {
   console.log("User flipped " + cards[cardId].rank + ".");
-  console.log(cards[cardId].cardImage);
-  console.log(cards[cardId].suit);
   //This adds the flipped card to the array of "Cards in play"
   cardsInPlay.push(cards[cardId].rank);
-  //This runs the checkForMatch function above
   checkForMatch();
+  console.log(cards[cardID].cardImage);
+  console.log(cards[cardID].suit)
 }
 //The two cards that are flipped
 flipCard(0);
